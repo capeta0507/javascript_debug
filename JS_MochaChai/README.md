@@ -10,13 +10,6 @@ Mocha,Chai : https://www.youtube.com/watch?v=sPyb6QlgBaU
 ```
 
 #### 到package.json 將test內容改成mocha
-```javascript=
-  "scripts": {
-    "test": "mocha"
-  }
-```
-#### 建立test資料夾，所有的測試檔都放在這
-#### 在外面建立js檔案，範例內容(first.js)
 ```json=
 {
   "name": "js_mochachai",
@@ -32,6 +25,13 @@ Mocha,Chai : https://www.youtube.com/watch?v=sPyb6QlgBaU
     "chai": "^4.2.0",
     "mocha": "^6.2.0"
   }
+}
+```
+#### 建立test資料夾，所有的測試檔都放在這
+#### 在外面建立js檔案，範例內容(first.js)
+```javascript=
+module.exports = function() {
+    return "hello world";
 }
 ```
 #### 在test資料夾內建立測試檔，測試檔名稱建議跟要測試的檔名相同，後面加個test命名(firstTest.js)
