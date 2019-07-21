@@ -6,7 +6,7 @@ Mocha,Chai : https://www.youtube.com/watch?v=sPyb6QlgBaU
 
 #### 安裝Mocha 跟 Chai
 ```
-    npm install --save-Mocha Chai
+    npm install --save-dev Mocha Chai
 ```
 
 #### 到package.json 將test內容改成mocha
@@ -17,9 +17,21 @@ Mocha,Chai : https://www.youtube.com/watch?v=sPyb6QlgBaU
 ```
 #### 建立test資料夾，所有的測試檔都放在這
 #### 在外面建立js檔案，範例內容(first.js)
-```javascript=
-module.exports = function() {
-    return "hello world";
+```json=
+{
+  "name": "js_mochachai",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.0"
+  }
 }
 ```
 #### 在test資料夾內建立測試檔，測試檔名稱建議跟要測試的檔名相同，後面加個test命名(firstTest.js)
