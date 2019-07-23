@@ -13,6 +13,9 @@ https://www.youtube.com/watch?v=7r4xVDI2vho
 ### 安裝 jest
 1. npm install --save-dev jest
 2. package.json 的 script段落，修改 "test": "jest"，指名 npm run test 執行 jest 測試。
+
+### jest intellisense for Visual Studio code
+npm install --save-dev @types/jest
 ```json=
 {
   "name": "JS_jest",
@@ -26,6 +29,7 @@ https://www.youtube.com/watch?v=7r4xVDI2vho
   "author": "davidtpe",
   "license": "ISC",
   "dependencies": {
+    "@types/jest": "^24.0.15",
     "jest": "^24.8.0"
   }
 }
