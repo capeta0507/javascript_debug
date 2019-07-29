@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Javascript除錯</title>
+</head>
+<body>
+    <h1>用Chrome除錯</h1>
+    <p id="myText">Source除錯</p>
+</body>
+
+<script>
+    // Chrome 斷點除錯技巧
+    // myData Class陣列
+    let myData = [
+            {   title:'Father',
+                name:'David',
+                age:57
+            },
+            {   title:'Mother',
+                name:'Sandy',
+                age:56
+            },
+            {   title:'Son',
+                name:'Johnny',
+                age:25
+            },
+            {   title:'daughter',
+                name:'Rebecca',
+                age:15
+            }
+        ];
+    // 顯示 P 的內容
+    let textStr = document.getElementById('myText').innerText;
+    console.log('p : ' , textStr);
+    
+    console.group("myData...");
+    for(y=0;y<myData.length;y++){
+        console.log(myData[y]);
+    }
+    console.groupEnd(); // myData 結束
+
+    // console.group()訊息群組
+    console.group("數字累加");
+    // 計算 1 + 2 + 3 ... + 10 = 55
+    let xResult = 0
+    for(x=1;x<=10;x++){
+        xResult += x;
+        console.log(x,xResult);
+    }
+    console.log("xResult : " , xResult);
+    console.groupEnd(); // 訊息群組 結束
+    
+</script>
+
+</html>
