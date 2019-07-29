@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Javascript除錯</title>
+</head>
+<body>
+    <h1>用Chrome除錯</h1>
+    <p id="myText">Console除錯</p>
+
+</body>
+<script>
+    // console 除錯技巧
+        // https://developers.google.com/web/tools/chrome-devtools/console/console-write?hl=zh-tw 
+    
+        // 開始計算 'thisTEST' 時段
+        console.time('thisTEST');
+    
+        // 顯示 P 的內容
+        let textStr = document.getElementById('myText').innerText;
+        console.log('p .log : ' , textStr);
+        console.info('p .info : ' , textStr);
+        console.error('p .error : ' , textStr);    
+        console.warn('p .warn : ' , textStr);
+    
+        // myData Class陣列
+        let myData = [
+            {   title:'Father',
+                name:'David',
+                age:57
+            },
+            {   title:'Mother',
+                name:'Sandy',
+                age:56
+            },
+            {   title:'Son',
+                name:'Johnny',
+                age:25
+            },
+            {   title:'daughter',
+                name:'Rebecca',
+                age:15
+            }
+        ];
+        let myNum = [2,4,5,33,556,11,8];
+        let myJson = {
+            "Team": "McLaren",
+            "Driver": "Alonso",
+            "Num": 14,
+            "Age": 38
+        }
+        // Console.log 傳統顯示 
+        console.log(myData);
+        // Console.table 傳統顯示 
+        console.table(myData);
+
+        console.table(myNum);
+
+        console.table(myJson);
+    
+        // console.group()訊息群組
+        console.group("數字累加");
+        // 計算 1 + 2 + 3 ... + 10 = 55
+        let xResult = 0
+        for(x=1;x<=10;x++){
+            xResult += x;
+            console.log(x,xResult);
+            // console.assert 斷言：第一參數的條件 = True 時跳過，第一參數的條件 = False 顯示第二參數的訊息
+            console.assert(xResult < 40,'超過40囉！');
+        }
+        console.log("xResult : " , xResult);
+        console.groupEnd(); // 訊息群組 結束
+    
+        // 顯示 'thisTEST' 執行時間
+        console.timeEnd('thisTEST');
+</script>
+</html>
